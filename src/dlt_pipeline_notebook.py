@@ -2,17 +2,21 @@ import dlt
 import pyspark.sql.functions as F
 import pyspark.sql.types as T
 
+s3_trusted_prefix = spark.conf.get("s3_trusted_prefix")
+
 
 json_path = "/databricks-datasets/wikipedia-datasets/data-001/clickstream/raw-uncompressed-json/2015_2_clickstream.json"
 @dlt.table(
-  comment="The raw wikipedia clickstream dataset, ingested from /databricks-datasets."
+  comment="The raw wikipedia clickstream dataset, ingested from /databricks-datasets.",
+  path=s3_trusted_prefix,
 )
 def clickstream_raw():
   return (spark.read.json(json_path))
 
 
 @dlt.table(
-  comment="Wikipedia clickstream data cleaned and prepared for analysis."
+  comment="Wikipedia clickstream data cleaned and prepared for analysis.",
+  path=s3_trusted_prefix,
 )
 @dlt.expect("valid_current_page_title", "current_page_title IS NOT NULL")
 @dlt.expect_or_fail("valid_count", "click_count > 0")
@@ -27,7 +31,8 @@ def clickstream_prepared():
 
 
 @dlt.table(
-  comment="A table containing the top pages linking to the Apache Spark page."
+  comment="A table containing the top pages linking to the Apache Spark page.",
+  path=s3_trusted_prefix,
 )
 def top_spark_referrers():
   return (

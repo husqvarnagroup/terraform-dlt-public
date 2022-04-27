@@ -45,6 +45,11 @@ variable "s3_backend_profile" {
   type = string  
 }
 
+variable "s3_trusted_prefix" {
+  description = "The DLT Pipeline S3 prefix for Trusted Data"
+  type = string
+}
+
 # PROVIDER
 
 terraform {
@@ -91,6 +96,9 @@ resource "databricks_pipeline" "this" {
   name    = "Terraform DLT Example - ${var.cluster_environment_type}"
   storage = "/mnt/husqvarna-datalake-dev/analytics/usr/miles.hopper/processing/first-pipeline-${var.cluster_environment_type}"
   target  = "example-database-${var.cluster_environment_type}"
+  configuration = {
+    s3_trusted_prefix = var.s3_trusted_prefix
+  }
 
   cluster {
     label               = "default"
@@ -131,4 +139,6 @@ resource "databricks_pipeline" "this" {
   filters {}
 
   continuous = false
+  # development = true
+  # edition = core
 }
