@@ -25,25 +25,6 @@ variable "cluster_instance_profile_arn" {
   type = string
 }
 
-variable "s3_backend_bucket" {
-  description = "The S3 Bucket used to store the Terraform backend"  # Recommended that bucket version control is enabled
-  type = string
-} 
-
-variable "s3_backend_key" {
-  description = "The S3 Key used to store the Terraform backend"
-  type = string  
-}
-
-variable "s3_backend_region" {
-  description = "The S3 AWS region used to store the Terraform backend"
-  type = string  
-}
-
-variable "s3_backend_profile" {
-  description = "The S3 profile used to store the Terraform backend"
-  type = string  
-}
 
 variable "s3_trusted_prefix" {
   description = "The DLT Pipeline S3 prefix for Trusted Data"
@@ -65,10 +46,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket  = var.s3_backend_bucket
-    key     = var.s3_backend_key
-    region  = var.s3_backend_region
-    profile = var.s3_backend_profile
+    bucket  = "husqvarna-datalake"
+    key     = "analytics/usr/miles.hopper/terraform-dlt/configuration/terraform-state"
+    region  = "eu-west-1"
+    profile = "BigData"
   }
 }
 
@@ -132,7 +113,7 @@ resource "databricks_pipeline" "this" {
 
   library {
     notebook {
-      path = databricks_notebook.dlt_manufacturing.id
+      path = databricks_notebook.dlt_pipeline_notebook.id
     }
   }
 
