@@ -5,9 +5,9 @@
 
 This repository contains example code for deploying Databricks [Delta Live Tables](https://docs.databricks.com/data-engineering/delta-live-tables/index.html) pipelines with [Terraform](https://www.terraform.io/).
 
-Delta Live Tables is a framework for building reliable, maintainable, and testable data processing pipelines. You define the transformations to perform on your data, and Delta Live Tables manages task orchestration, cluster management, monitoring, data quality, and error handling.
+[Delta Live Tables](https://docs.databricks.com/data-engineering/delta-live-tables/index.html) is a framework for building reliable, maintainable, and testable data processing pipelines. You define the transformations to perform on your data, and Delta Live Tables manages task orchestration, cluster management, monitoring, data quality, and error handling.
 
-Terraform is an open-source infrastructure as code software tool that enables you to safely and predictably create, change, and improve infrastructure. The [Terraform "databricks_pipeline" Resource](https://registry.terraform.io/providers/databrickslabs/databricks/latest/docs/resources/pipeline) is used to deploy Delta Live Tables.
+[Terraform](https://www.terraform.io/) is an open-source infrastructure as code software tool that enables you to safely and predictably create, change, and improve infrastructure. The [Terraform "databricks_pipeline" Resource](https://registry.terraform.io/providers/databrickslabs/databricks/latest/docs/resources/pipeline) is used to deploy Delta Live Tables.
 
 ## Built With
 - [Terraform](https://www.terraform.io/)
