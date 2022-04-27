@@ -19,7 +19,7 @@ This repository contains example code for deploying Databricks [Delta Live Table
 
 ### Prerequisites
 
-- [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+- [Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
 ### Installation
 1. Clone the repo
