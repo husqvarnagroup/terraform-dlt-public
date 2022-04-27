@@ -24,7 +24,7 @@ This repository contains example code for deploying Databricks [Delta Live Table
 ### Installation
 1. Clone the repo
 ```console
-git clone https://github.com/husqvarnagroup/terraform-dlt-public.git
+$ git clone https://github.com/husqvarnagroup/terraform-dlt-public.git
 ```
 
 2. Update var-files in config folder with your settings.
