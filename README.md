@@ -23,19 +23,29 @@ This repository contains example code for deploying Databricks [Delta Live Table
 
 ### Installation
 1. Clone the repo
-> `git clone https://github.com/husqvarnagroup/terraform-dlt-public.git`
+```console
+git clone https://github.com/husqvarnagroup/terraform-dlt-public.git
+```
 
 2. Update var-files in config folder with your settings.
  
 ### Usage
 1. Open a terminal and ensure you are logged into the desired AWS Profile:
-> `$ aws sso login --profile <aws_profile_name>`
+```console
+$ aws sso login --profile <aws_profile_name>
+```
 
 2. Initialize the Terraform backend:
-> `$ terraform init`
+```console
+$ terraform init`
+```
 
 3. Show the Terraform Plan to confirm everything works:
-> `$ terraform plan -var-file=config/<var-file-name>.tfvars`
+```console
+$ terraform plan -var-file=config/<var-file-name>.tfvars`
+```
 
 3. After confirming everything works, apply the changes:
-> `$ terraform apply -var-file=config/<var-file-name>.tfvars`
+```console
+$ terraform apply -var-file=config/<var-file-name>.tfvars`
+```
