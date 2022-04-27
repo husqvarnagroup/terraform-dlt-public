@@ -1,4 +1,4 @@
-databricks_connection_profile = ""
+databricks_connection_profile = "bigdata"
 
 databricks_user_name = "miles.hopper@husqvarnagroup.com"
 

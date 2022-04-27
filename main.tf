@@ -68,7 +68,7 @@ data "databricks_user" "me" {
 ## Notebook
 resource "databricks_notebook" "dlt_pipeline_notebook" {
   source = "${path.module}/src/dlt_pipeline_notebook.py"
-  path   = "${data.databricks_user.me.repos}/examples/terraform-dlt"
+  path   = "${data.databricks_user.me.home}/examples/terraform-dlt"
   format = "SOURCE"
 }
 
