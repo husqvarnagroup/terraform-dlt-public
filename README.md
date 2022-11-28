@@ -35,7 +35,7 @@ $ git clone https://github.com/husqvarnagroup/terraform-dlt-public.git
 - config/live-backend-config.tfvars
 - config/live-variables.tfvars
 
- 
+
 ## Usage
 1. Open a terminal and ensure you are logged into the correct AWS Profile:
 ```bash
@@ -66,9 +66,8 @@ $ terraform apply -var-file=config/<dev-or-live>-variables.tfvars
 $ terraform destroy -var-file=config/<dev-or-live>-variables.tfvars
 ```
 
-## Limitations
+## Delta Live Tables settings
 ### Delta Live Tables Product Edition
-It is not currently possible to define the [Delta Live Tables Product Edition](https://docs.microsoft.com/en-us/azure/databricks/data-engineering/delta-live-tables/delta-live-tables-concepts#product-editions) with the [Terraform "databricks_pipeline" Resource](https://registry.terraform.io/providers/databrickslabs/databricks/latest/docs/resources/pipeline). This must be done manually within Databricks itself.
+Set the correct product edition based on features needed. [Delta Live Tables Product Edition](https://docs.microsoft.com/en-us/azure/databricks/data-engineering/delta-live-tables/delta-live-tables-concepts#product-editions)
 ### Delta Live Tables Development or Production Mode
-It is not currently possible to define the [Delta Live Tables Development or Production mode](https://docs.microsoft.com/en-us/azure/databricks/data-engineering/delta-live-tables/delta-live-tables-concepts#--development-and-production-modes) with the [Terraform "databricks_pipeline" Resource](https://registry.terraform.io/providers/databrickslabs/databricks/latest/docs/resources/pipeline). This must be done manually within Databricks itself.
-
+Set mode depending on environment. Delta Live Tables Development or Production mode](https://docs.microsoft.com/en-us/azure/databricks/data-engineering/delta-live-tables/delta-live-tables-concepts#--development-and-production-modes)
