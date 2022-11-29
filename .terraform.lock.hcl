@@ -1,25 +1,25 @@
 # This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
-provider "registry.terraform.io/databrickslabs/databricks" {
-  version = "0.5.5"
+provider "registry.terraform.io/databricks/databricks" {
+  version = "1.6.5"
   hashes = [
-    "h1:akCOlGhCoS1l4H9PF5Sx92nW1fKmKLMkekBLnc8zhuc=",
-    "zh:34fe845cde7316d5fca849b8545321e3887c1eb0c4c0eea9a44d213a174cacfc",
-    "zh:5cf2ba503cfcc17252960a8b62a4289217852d9f2f8ac0e48a21fcc4edafde58",
-    "zh:811787b04cde34d0ac30a67e568a84f9bd7533962a88642d2f9c580b43645605",
-    "zh:97111fa911083834f47b9375263f175eab3deff392671026cc528cdfb54a6279",
-    "zh:b09595def598e4bce2bf1728feb7f05b43cfaab0c16464cb5a9fe4fc6ec89b6b",
-    "zh:b3a6fc639c5096daeae81041588a3f6bd1ba938d4ff63839e2c28d6ea1964bb0",
-    "zh:e6d0e88652a2d24bdb93e03649373f3b05e18f83d1ce4ef335fc82770955be1f",
-    "zh:f0b2bd83f8d209c885758d4c829faa7f186dfc664536b3084b2ee234fe838eda",
-    "zh:f0f643d7d364723dadc51d4e942b925680ab89cb6fd8760b691ae75bda1d6c2a",
+    "h1:U7YiXiVewo5Hh6DDKbJyvL/dX3QaaTtg+w5I4rPxyMQ=",
+    "zh:28ecc2d3f822c8453871af975b91bd6fbfafeeb7d2f6a6e1ffb88c5bad3b8d65",
+    "zh:5f2377443f5e7934fab7ae18edbc0eedf422c12b6f8be99408b73e1104308694",
+    "zh:62f6fc8a4e6ecf5412f2923b3349a0c197f27d5d475210f77a1306824e6641a3",
+    "zh:6db69d9ea3b170bb457132426d60aa9b2cc01a098137300a969339c0ce11c792",
+    "zh:7e101671d31e45485a7cb0b52dc537e6648dfb9290de6662f4a0e5c22393a53d",
+    "zh:856a0d4d74af7765894c3f3ece6185f97a5a2ee290946ad32ddfbb3011b2f7cd",
+    "zh:86b8ccde61c664a0d092152fccc0a95c8dcbb5b6b03b544bcd8c4db084067edc",
+    "zh:910c7241576b93e3b36ccaa434bbbe155bb9f409453aa3cce8855f94ff490dd7",
+    "zh:d16ab0aee6e9df81ef0cbddd830654ace7a705d6f0239a895e9fec946a38e37a",
+    "zh:dddc2189b481eeef0c1969a4be09a586d46f729b1e8bce7d2d0320a530cd4259",
   ]
 }
 
 provider "registry.terraform.io/hashicorp/aws" {
-  version     = "3.75.1"
-  constraints = "~> 3.27"
+  version = "3.75.1"
   hashes = [
     "h1:++H0a4igODgreQL3SJuRz71JZkC69rl41R8xLYM894o=",
     "zh:11c2ee541ca1da923356c9225575ba294523d7b6af82d6171c912470ef0f90cd",
