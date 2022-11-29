@@ -6,17 +6,12 @@ variable "databricks_connection_profile" {
 }
 
 variable "dlt_pipeline_storage_path" {
-  description = "The s3 path used to store the Delta Live Tables pipeline metadata"
+  description = "The full S3 path to store the Delta Live Tables pipeline metadata"
   type = string
 }
 
 variable "dlt_databricks_database" {
-  description = "The databricks database used to store the Delta Live Tables pipeline Tables"
-  type = string
-}
-
-variable "cluster_environment_type" {
-  description = "Cluster EnvironmentType tag"
+  description = "The databricks hive database used to store the Delta Live Tables pipeline Tables"
   type = string
 }
 
@@ -26,12 +21,17 @@ variable "cluster_instance_type" {
 }
 
 variable "cluster_instance_profile_arn" {
-  description = "The cluster instance profile arn"
+  description = "The cluster instance profile arn that provide S3 access to Databricks cluster"
   type = string
 }
 
 variable "cluster_cost_center" {
   description = "The cluster CostCenter tag"
+  type = string
+}
+
+variable "cluster_environment_type" {
+  description = "Cluster EnvironmentType tag"
   type = string
 }
 
@@ -41,6 +41,6 @@ variable "cluster_service" {
 }
 
 variable "s3_bucket_name" {
-  description = "The DLT Pipeline S3 prefix for Trusted Data"
+  description = "The bucket name that contains the data"
   type = string
 }
