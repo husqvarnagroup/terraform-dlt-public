@@ -72,6 +72,6 @@ resource "databricks_job" "this" {
   }
 
   email_notifications {
-    on_failure = ["${data.databricks_current_user.me.user_name}"]
+    on_failure = [data.databricks_current_user.me.user_name]
   }
 }
