@@ -62,13 +62,18 @@ resource "databricks_pipeline" "this" {
 
 resource "databricks_job" "this" {
   name = "Terraform DLT Example - job"
-  pipeline_task {
-    pipeline_id = databricks_pipeline.this.id
+
+
+  task {
+    task_key = "a"
+    pipeline_task {
+      pipeline_id = databricks_pipeline.this.id
+    }
   }
 
   schedule {
     quartz_cron_expression = "0 0 3 ? * Mon,Wed,Fri"
-    timezone_id            = "Europe/Stockholm"
+    timezone_id            = "Europe/Amsterdam"
   }
 
   email_notifications {
